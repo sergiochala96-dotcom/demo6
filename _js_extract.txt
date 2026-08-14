@@ -1,0 +1,85 @@
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.moduleTrackRef = React.createRef();
+  }
+
+  scrollModules(dir) {
+    const el = this.moduleTrackRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir === 'left' ? -260 : 260, behavior: 'smooth' });
+  }
+
+  renderValsOLD() {
+    const characters = [
+      { name: 'La Multitarea Agotada', desc: 'Publica en cinco redes a la vez, responde comentarios a media noche y siente que nunca desconecta.', bg: '#CBEF3E' },
+      { name: 'La Escéptica de la IA', desc: 'Cree que la IA le quitará su toque personal, así que sigue redactando todo a mano, letra por letra.', bg: '#9FD8FF' },
+      { name: 'El Copia y Pega', desc: 'Prueba cada prompt viral que ve, pero sus publicaciones suenan igual que las de todos los demás.', bg: '#FFD98E' },
+      { name: 'La Perfeccionista Bloqueada', desc: 'Revisa cada caption veinte veces y termina publicando dos días tarde, si es que publica.', bg: '#FFB4C6' },
+      { name: 'El Optimista Confundido', desc: 'Sabe que la IA puede ayudarle, pero cada herramienta nueva lo deja con más preguntas que respuestas.', bg: '#C9B8FF' },
+    ];
+    const painPoints = [
+      'Presión constante por publicar más contenido, más rápido',
+      'Promesas de "productividad instantánea" que no se cumplen',
+      'Prompts genéricos que producen contenido irrelevante',
+      'Crisis de identidad de marca al usar contenido que no refleja tu voz',
+      'Horas perdidas ajustando indicaciones sin obtener resultados',
+    ];
+    const benefits = [
+      { title: 'Dominar el Arte del Prompt', desc: 'Crea indicaciones poderosas que generen ideas y contenido en minutos, no en horas.' },
+      { title: 'Optimizar tu Flujo de Trabajo', desc: 'Integra la IA de forma eficiente en tu gestión diaria de redes sociales.' },
+      { title: 'Crear Contenido que Venda', desc: 'Diseña publicaciones que conecten con tu audiencia y generen resultados reales.' },
+      { title: 'Automatizar con Chatbots', desc: 'Configura respuestas automáticas y flujos que atienden a tu comunidad 24/7.' },
+      { title: 'Lanzar tus Primeros Anuncios', desc: 'Introdúcete en Facebook Ads con una base sólida y estratégica.' },
+      { title: 'Medir tus Resultados', desc: 'Aprende a leer informes y ajustar tu estrategia con datos reales.' },
+      { title: 'Preservar tu Voz Única', desc: 'Usa la IA para amplificar tu estilo, no para reemplazarlo.' },
+      { title: 'Multiplicar tu Productividad', desc: 'Produce más contenido de calidad en mucho menos tiempo.' },
+    ];
+    const processSteps = [
+      { label: 'CREA', title: 'Diseña tus propios prompts', desc: 'Prompts tan únicos como tu marca personal o la de tus clientes.' },
+      { label: 'EVOLUCIONA', title: 'Adapta tus prompts al crecimiento', desc: 'Mantente al día con las tendencias de redes sociales.' },
+      { label: 'DOMINA', title: 'Entiende la psicología detrás de un prompt efectivo', desc: 'Estructura peticiones que dan respuestas precisas.' },
+      { label: 'LIBÉRATE', title: 'Supera la dependencia de prompts prefabricados', desc: 'Gana confianza en tu propia creatividad con IA.' },
+    ];
+    const modules = [
+      { num: 1, title: 'Introducción al Community Manager', desc: 'Domina los fundamentos del rol y cómo la IA se integra en tu día a día.', isNew: false },
+      { num: 2, title: 'Estrategias de Redes Sociales', desc: 'Construye una estrategia de contenido sólida para cada plataforma.', isNew: false },
+      { num: 3, title: 'Herramientas de Inteligencia Artificial', desc: 'Conoce y domina las herramientas de IA clave para tu trabajo diario.', isNew: true },
+      { num: 4, title: 'Creando tu Facebook, Instagram, TikTok y más', desc: 'Configura y optimiza tus perfiles en cada red social.', isNew: false },
+      { num: 5, title: 'Contenido que Genera Ventas', desc: 'Aprende a crear publicaciones que conviertan seguidores en clientes.', isNew: false },
+      { num: 6, title: 'Chatbots y Automatizaciones', desc: 'Automatiza la atención a tu comunidad sin perder calidez.', isNew: true },
+      { num: 7, title: 'Introducción a Facebook Ads', desc: 'Da tus primeros pasos en publicidad pagada con confianza.', isNew: true },
+      { num: 8, title: 'Informes', desc: 'Mide, interpreta y comunica los resultados de tu gestión.', isNew: false },
+    ];
+    const bonuses = [
+      { tag: 'BONUS 1', title: 'MasterClass: Diseña en Canva en Tiempo Récord', desc: 'Aprende a crear piezas gráficas profesionales para tus redes en minutos.', value: 'Valor $47 USD — Gratis con el curso', imgBg: '#7CE0D3' },
+      { tag: 'BONUS 2', title: 'Plantillas VIP de Canva + Portafolios de Servicios', desc: 'Plantillas listas para publicaciones de Instagram y portafolios de servicios.', value: 'Valor $27 USD — Gratis con el curso', imgBg: '#CBEF3E' },
+      { tag: 'BONUS 3', title: 'Comunidad en WhatsApp + Clase en Vivo', desc: 'Acceso a la comunidad privada y una clase en vivo por Zoom.', value: 'Incluido con el curso', imgBg: '#FFD98E' },
+    ];
+    const testimonials = [
+      { quote: 'Reemplaza este texto con la opinión real de tu alumno.', name: 'Nombre Apellido — Cargo' },
+      { quote: 'Reemplaza este texto con la opinión real de tu alumno.', name: 'Nombre Apellido — Cargo' },
+      { quote: 'Reemplaza este texto con la opinión real de tu alumno.', name: 'Nombre Apellido — Cargo' },
+    ];
+    const includes = [
+      '8 módulos de contenido práctico y aplicable',
+      'Ejercicios y desafíos para dominar cada técnica',
+      'Acceso de por vida al curso y sus actualizaciones',
+      'La capacidad de revolucionar tu forma de trabajar con IA',
+    ];
+    const enrollItems = [
+      'Acceso de por vida a Community Manager Express con IA y sus actualizaciones',
+      'MasterClass de diseño en Canva',
+      'Plantillas VIP de Canva + Portafolios de servicios',
+      'Comunidad en WhatsApp + clase en vivo por Zoom',
+    ];
+    return {
+      characters, painPoints, benefits, processSteps, modules, bonuses,
+      testimonials, includes, enrollItems,
+      moduleTrackRef: this.moduleTrackRef,
+      scrollModules: (dir) => this.scrollModules(dir),
+      year: new Date().getFullYear(),
+    };
+  }
+}

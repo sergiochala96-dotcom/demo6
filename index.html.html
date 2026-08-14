@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #fff; }
+  a { color: #3B2FD0; }
+  a:hover { color: #6A4BFF; }
+  @keyframes spark { 0%,100% { transform: scale(1) rotate(0deg); opacity: .85; } 50% { transform: scale(1.15) rotate(8deg); opacity: 1; } }
+</style>
+</helmet>
+
+<div style="font-family: 'Poppins', sans-serif; color: #14141a; overflow-x: hidden; background: #fff;">
+
+  <!-- HERO -->
+  <section style="background: {{ colors.accent }}; position: relative; padding: clamp(20px,4vw,40px) clamp(20px,5vw,80px) 60px;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+      <div style="flex: 1 1 460px; min-width: 300px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 22px;">
+          <div style="width: 36px; height: 36px; border-radius: 8px; background: {{ colors.primary }}; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <div style="width: 16px; height: 20px; border: 2px solid {{ colors.accent }}; border-radius: 2px;"></div>
+          </div>
+          <div style="font-family: 'Baloo 2', sans-serif; line-height: 1.05;">
+            <div style="font-size: 14px; font-weight: 700; letter-spacing: .5px; color: #14141a;">COMMUNITY MANAGER EXPRESS</div>
+            <div style="font-size: 18px; font-weight: 700; color: {{ colors.primary }};">con IA</div>
+          </div>
+        </div>
+        <h1 style="font-family: 'Baloo 2', sans-serif; font-size: clamp(30px,3.6vw,46px); line-height: 1.12; font-weight: 700; margin: 0 0 18px; color: #14141a;">
+          La guía definitiva para<br>gestionar tus redes con IA<br>
+          <span style="color: {{ colors.primary }};">(Sin perder tu esencia. Ni tu tiempo.)</span>
+        </h1>
+        <p style="font-size: 16px; line-height: 1.6; color: #23232b; max-width: 520px; margin: 0 0 16px;">
+          Este es el sistema exacto que <strong>me ha permitido pasar de perder horas planificando contenido a gestionar comunidades enteras con IA</strong>, multiplicando resultados sin quemarme.
+        </p>
+        <p style="font-size: 16px; line-height: 1.6; color: #23232b; max-width: 520px; margin: 0 0 28px;">
+          Con un sistema paso a paso para incorporar la IA en cada fase de tu gestión de redes, desde la estrategia hasta la respuesta a comentarios, sin perder tu voz de marca ni quedarte atascado probando herramientas.
+        </p>
+        <button style="font-family: 'Baloo 2', sans-serif; background: {{ colors.primary }}; color: #fff; border: none; padding: 18px 30px; border-radius: 10px; font-size: 15px; font-weight: 700; letter-spacing: .3px; cursor: pointer; box-shadow: 0 6px 0 {{ colors.primaryShadow }}; transition: transform .15s ease, box-shadow .15s ease" style-hover="transform: translateY(-2px); box-shadow: 0 8px 0 {{ colors.primaryShadow }};" style-active="transform: translateY(4px); box-shadow: 0 2px 0 {{ colors.primaryShadow }};">
+          EMPIEZA HOY MISMO POR $47 »
+        </button>
+      </div>
+      <div style="flex: 1 1 380px; min-width: 300px; position: relative; display: flex; justify-content: center">
+        
+        <div style="width: min(100%,420px); aspect-ratio: 3/4; border-radius: 24px; background: url(&quot;./sergiochala_1765990740752-mss33syd-t5xx.jpeg&quot;) center / cover no-repeat; display: flex; align-items: center; justify-content: center; position: relative">
+          
+          <div style="position: absolute; top: -18px; left: -18px; width: 26px; height: 26px; background: {{ colors.primary }}; border-radius: 3px; animation: spark 3s ease-in-out infinite;"></div>
+          <div style="position: absolute; bottom: 40%; right: -10px; width: 18px; height: 18px; background: {{ colors.teal }}; border-radius: 3px; animation: spark 3.5s ease-in-out infinite .4s;"></div>
+        </div><div style="position: absolute; bottom: -10px; right: 6%; width: 120px; height: 150px; background: url(&quot;./whatsapp-image-2026-01-05-at-10-41-42-pm-mss34f8c-n2jm.jpeg&quot;) center / cover no-repeat; border-radius: 8px; border: 6px solid #fff; display: flex; align-items: center; justify-content: center">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSITION BAR -->
+  <section style="background: {{ colors.dark }}; padding: 30px clamp(20px,5vw,80px);">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; text-align: center;">
+      <span style="color: {{ colors.accent }}; font-size: 20px;">»</span>
+      <p style="font-family: 'Baloo 2', sans-serif; color: #fff; font-size: clamp(18px,2vw,24px); font-weight: 600; margin: 0;">
+        La IA y tú: <span style="color: {{ colors.accent }};">una historia de amor, odio y confusión</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- PERSONALITY QUIZ -->
+  <section style="background: {{ colors.dark }}; padding: 60px clamp(20px,5vw,80px);">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <h2 style="font-family: 'Baloo 2', sans-serif; text-align: center; font-size: clamp(22px,2.4vw,30px); margin: 0 0 10px;">
+        <span style="color: #fff;">¿En qué community manager</span> <span style="color: {{ colors.teal }};">te reconoces?</span>
+      </h2>
+      <p style="text-align: center; color: #aaa; max-width: 640px; margin: 0 auto 40px; font-size: 15px; line-height: 1.6;">
+        Cuando se trata de la IA y la gestión de redes, el mundo se divide en un espectro fascinante de personajes. ¿Te identificas con alguno?
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px,1fr)); gap: 20px;">
+        <sc-for list="{{ characters }}" as="c" hint-placeholder-count="5">
+          <div style="background: {{ colors.darkCard }}; border-radius: 16px; padding: 18px; text-align: center;">
+            <div style="width: 100%; aspect-ratio: 1; border-radius: 12px; background: {{ c.bg }}; display: flex; align-items: center; justify-content: center; margin-bottom: 14px;">
+              <span style="font-family: monospace; font-size: 11px; color: rgba(0,0,0,.55);">avatar</span>
+            </div>
+            <div style="font-family: 'Baloo 2', sans-serif; color: #fff; font-weight: 600; font-size: 16px; margin-bottom: 8px;">{{ c.name }}</div>
+            <div style="color: #999; font-size: 13px; line-height: 1.5;">{{ c.desc }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="text-align: center; margin: 56px 0 32px;">
+        <h3 style="font-family: 'Baloo 2', sans-serif; color: #fff; font-size: clamp(18px,2vw,24px); font-weight: 600; margin: 0 0 18px;">
+          ¿Te identificas con alguno de estos perfiles?
+          <span style="background: {{ colors.primary }}; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 15px; margin-left: 6px; display: inline-block;">Yo sí.</span>
+        </h3>
+        <p style="color: #aaa; max-width: 640px; margin: 0 auto 14px; font-size: 15px; line-height: 1.6;">
+          Al menos hace un año estaba en uno de ellos y es lo más normal. Cada uno representa una etapa en el viaje de aprendizaje con la IA.
+        </p>
+        <p style="color: {{ colors.accent }}; max-width: 700px; margin: 0 auto; font-size: 15px; line-height: 1.6;">
+          Pero más allá de estas etiquetas, existe una realidad compartida: la lucha diaria por integrar la IA en la gestión de comunidades, en la que todos enfrentamos los mismos desafíos:
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 24px;">
+        <sc-for list="{{ painPoints }}" as="p" hint-placeholder-count="5">
+          <div style="border-top: 2px solid {{ colors.teal }}; padding-top: 14px;">
+            <div style="color: {{ colors.teal }}; font-size: 20px; margin-bottom: 10px;">✦</div>
+            <div style="color: #ddd; font-size: 14px; line-height: 1.5;">{{ p }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSE INTRO -->
+  <section style="background: {{ colors.primary }}; padding: 70px clamp(20px,5vw,80px);">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center; margin-bottom: 50px;">
+        <div style="flex: 1 1 360px; min-width: 280px;">
+          <h2 style="font-family: 'Baloo 2', sans-serif; color: #fff; font-size: clamp(16px,1.8vw,20px); font-weight: 600; margin: 0 0 6px;">Es aquí donde entra en juego</h2>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px;">
+            <div style="width: 34px; height: 34px; border-radius: 8px; background: #fff; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 14px; height: 18px; border: 2px solid {{ colors.primary }}; border-radius: 2px;"></div>
+            </div>
+            <div style="font-family: 'Baloo 2', sans-serif; font-size: clamp(20px,2.4vw,28px); font-weight: 700; color: #fff; line-height: 1.1;">
+              COMMUNITY MANAGER EXPRESS<br><span style="color: {{ colors.accent }};">con IA</span>
+            </div>
+          </div>
+          <p style="color: {{ colors.textTint1 }}; font-size: 15px; line-height: 1.65; max-width: 460px;">
+            Este curso no es solo otra guía más sobre cómo usar herramientas de IA. Es tu camino para gestionar redes sociales con estrategia, velocidad y voz propia en la era de la inteligencia artificial.
+          </p>
+        </div>
+        <div style="flex: 1 1 380px; min-width: 280px; display: flex; justify-content: center;">
+          <div style="width: min(100%,420px); aspect-ratio: 16/11; border-radius: 16px; background: repeating-linear-gradient(135deg,#3a24b8,#3a24b8 14px,#43299f 14px,#43299f 28px); display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: monospace; font-size: 12px; color: {{ colors.accent }};">mockup: dispositivos con el curso</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-family: 'Baloo 2', sans-serif; color: #fff; font-size: clamp(18px,2vw,24px); font-weight: 600; margin: 0 0 22px;">Al completar "Community Manager Express con IA", aprenderás a:</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 18px;">
+        <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="8">
+          <div style="background: {{ colors.primaryLight }}; border-radius: 14px; padding: 22px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+              <span style="color: {{ colors.accent }}; font-size: 16px;">✦✦</span>
+              <span style="font-family: 'Baloo 2', sans-serif; color: #fff; font-weight: 600; font-size: 16px;">{{ b.title }}</span>
+            </div>
+            <div style="color: {{ colors.textTint1 }}; font-size: 13.5px; line-height: 1.6;">{{ b.desc }}</div>
+            <div style="height: 3px; width: 40px; background: {{ colors.accent }}; border-radius: 2px; margin-top: 14px;"></div>
+          </div>
+        </sc-for>
+      </div>
+      <p style="text-align: center; color: {{ colors.textTint1 }}; font-size: 15px; margin: 40px auto 0; max-width: 720px; line-height: 1.6;">
+        Con estas habilidades, no solo gestionarás mejor y más rápido, sino que también transformarás fundamentalmente tu enfoque estratégico en la era de la IA.
+      </p>
+    </div>
+  </section>
+
+  <!-- STOP BEGGING PROMPTS -->
+  <section style="background: #fff; padding: 70px clamp(20px,5vw,80px);">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 50px; align-items: flex-start; margin-bottom: 56px;">
+      <div style="flex: 1 1 400px; min-width: 280px;">
+        <h2 style="font-family: 'Baloo 2', sans-serif; font-size: clamp(24px,2.6vw,32px); color: #14141a; margin: 0 0 18px; line-height: 1.2;">
+          Deja de mendigar prompts.<br><span style="color: {{ colors.primary }};">Aprende a crearlos.</span>
+        </h2>
+        <p style="font-size: 15px; line-height: 1.65; color: #444; margin: 0 0 14px;">
+          Mientras otros se conforman con copiar y pegar prompts "mágicos", tú aprenderás a diseñar los tuyos propios, hechos a la medida de tu marca.
+        </p>
+        <p style="font-size: 15px; line-height: 1.65; color: #444; margin: 0 0 14px;">
+          <strong>La verdad incómoda:</strong> esas listas de prompts genéricos que circulan por ahí son como zapatos prestados: nunca se ajustarán perfectamente a tu comunidad.
+        </p>
+        <p style="font-size: 15px; line-height: 1.65; color: #444; margin: 0;">
+          En este curso no solo recibirás una lista de prompts para memorizar. Te sumergirás en el arte y la ciencia de los prompts personalizados.
+        </p>
+      </div>
+      <div style="flex: 1 1 320px; min-width: 260px; display: flex; justify-content: center;">
+        <div style="width: min(100%,360px); aspect-ratio: 4/3; border-radius: 16px; background: repeating-linear-gradient(135deg,#eee,#eee 12px,#f6f6f6 12px,#f6f6f6 24px); display: flex; align-items: center; justify-content: center; position: relative;">
+          <span style="font-family: monospace; font-size: 12px; color: #999;">foto: mano rechazando</span>
+          <span style="position: absolute; font-size: 60px; color: #d33; opacity: .8;">✕</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 24px;">
+      <sc-for list="{{ processSteps }}" as="s" hint-placeholder-count="4">
+        <div>
+          <span style="background: {{ colors.accent }}; color: #14141a; font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: .5px; padding: 5px 14px; border-radius: 16px;">{{ s.label }}</span>
+          <h4 style="font-family: 'Baloo 2', sans-serif; font-size: 17px; font-weight: 600; margin: 14px 0 10px; color: #14141a;">{{ s.title }}</h4>
+          <div style="color: #555; font-size: 13.5px; line-height: 1.6;">{{ s.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section style="background: #F4F3EE; padding: 70px clamp(20px,5vw,80px);">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <div style="font-family: 'Baloo 2', sans-serif; color: {{ colors.primary }}; font-weight: 700; font-size: clamp(15px,1.8vw,18px); margin-bottom: 6px;">Desbloquea tu potencial creativo »</div>
+        <h2 style="font-family: 'Baloo 2', sans-serif; font-size: clamp(22px,2.6vw,30px); color: #14141a; margin: 0 0 16px; line-height: 1.25;">
+          8 módulos. Práctico y directo.<br>Resultados que se ven en tus redes.
+        </h2>
+        <p style="color: #666; font-size: 14px; max-width: 640px; margin: 0 auto;">¿Qué contiene el curso?</p>
+      </div>
+
+      <h3 style="font-family: 'Baloo 2', sans-serif; font-size: clamp(17px,2vw,22px); color: #14141a; margin: 0 0 24px;">Este es el temario para que empieces a trabajar mano a mano con la IA</h3>
+
+      <div style="position: relative;">
+        <div style="display: flex; gap: 20px; overflow-x: auto; padding-bottom: 10px; scroll-behavior: smooth;" ref="{{ moduleTrackRef }}">
+          <sc-for list="{{ modules }}" as="m" hint-placeholder-count="8">
+            <div style="background: #fff; border-radius: 14px; padding: 22px; min-width: 240px; flex: 0 0 240px; box-shadow: 0 2px 8px rgba(0,0,0,.05);">
+              <div style="width: 34px; height: 34px; border-radius: 8px; background: {{ colors.primaryTint }}; display: flex; align-items: center; justify-content: center; color: {{ colors.primary }}; font-weight: 700; margin-bottom: 14px;">{{ m.num }}</div>
+              <div style="font-family: 'Baloo 2', sans-serif; font-weight: 600; font-size: 15.5px; margin-bottom: 8px;">{{ m.title }}</div>
+              <div style="font-size: 13px; color: #666; line-height: 1.55;">{{ m.desc }}</div>
+              <sc-if value="{{ m.isNew }}" hint-placeholder-val="{{ false }}">
+                <span style="display: inline-block; margin-top: 12px; background: {{ colors.accent }}; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 12px; color: #14141a;">NUEVO</span>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px;">
+          <button onclick="{{ scrollModules('left') }}" style="width: 42px; height: 42px; border-radius: 50%; border: 2px solid {{ colors.primary }}; background: #fff; color: {{ colors.primary }}; font-size: 16px; cursor: pointer; transition: all .15s ease;" style-hover="background: {{ colors.primary }}; color: #fff;">←</button>
+          <button onclick="{{ scrollModules('right') }}" style="width: 42px; height: 42px; border-radius: 50%; border: 2px solid {{ colors.primary }}; background: #fff; color: {{ colors.primary }}; font-size: 16px; cursor: pointer; transition: all .15s ease;" style-hover="background: {{ colors.primary }}; color: #fff;">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BONUS -->
+  <section style="background: {{ colors.primary }}; padding: 70px clamp(20px,5vw,80px);">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <h2 style="font-family: 'Baloo 2', sans-serif; text-align: center; font-size: clamp(28px,4vw,44px); color: {{ colors.primaryLight }}; -webkit-text-stroke: 1px {{ colors.outlineStroke }}; margin: 0 0 6px;">Bonus</h2>
+      <p style="text-align: center; font-family: 'Baloo 2', sans-serif; color: #fff; font-size: clamp(18px,2vw,22px); font-weight: 600; margin: 0 0 6px;">Bonos VIP</p>
+      <p style="text-align: center; color: {{ colors.textTint2 }}; font-size: 14px; max-width: 560px; margin: 0 auto 40px;">Si adquieres HOY el curso, te llevas también estos bonos exclusivos.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 24px;">
+        <sc-for list="{{ bonuses }}" as="bo" hint-placeholder-count="3">
+          <div style="background: {{ colors.primaryLight }}; border-radius: 16px; overflow: hidden;">
+            <div style="padding: 16px 20px 0;">
+              <span style="background: #fff; color: {{ colors.primary }}; font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 11px; padding: 4px 12px; border-radius: 14px;">{{ bo.tag }}</span>
+            </div>
+            <div style="height: 120px; margin: 14px 20px 0; border-radius: 10px; background: {{ bo.imgBg }}; display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: monospace; font-size: 11px; color: rgba(0,0,0,.5);">imagen del bonus</span>
+            </div>
+            <div style="padding: 18px 20px 24px;">
+              <div style="font-family: 'Baloo 2', sans-serif; font-weight: 600; font-size: 17px; color: #fff; margin-bottom: 10px;">{{ bo.title }}</div>
+              <div style="font-size: 13.5px; color: {{ colors.textTint3 }}; line-height: 1.6; margin-bottom: 8px;">{{ bo.desc }}</div>
+              <div style="font-size: 13px; color: {{ colors.accent }}; font-weight: 700;">{{ bo.value }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section style="background: #fff; padding: 70px clamp(20px,5vw,80px);">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+      <div style="flex: 1 1 380px; min-width: 280px; display: flex; justify-content: center; order: 2;">
+        <div style="width: min(100%,340px); aspect-ratio: 4/5; border-radius: 16px; background: repeating-linear-gradient(135deg,#eae4ff,#eae4ff 14px,#f1ecff 14px,#f1ecff 28px); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: monospace; font-size: 12px; color: {{ colors.primary }};">foto: Sergio Chala</span>
+        </div>
+      </div>
+      <div style="flex: 1 1 420px; min-width: 280px; order: 1;">
+        <h2 style="font-family: 'Baloo 2', sans-serif; font-size: clamp(22px,2.6vw,30px); color: #14141a; margin: 0 0 18px; line-height: 1.25;">
+          De escéptico a experto:<br><span style="color: {{ colors.primary }};">mi camino con la IA.</span>
+        </h2>
+        <p style="font-size: 15px; line-height: 1.65; color: #444; margin: 0 0 14px;">
+          Hola, soy Sergio Chala. Hace un tiempo, gestionar redes sociales me consumía horas cada día: planificar, redactar, diseñar, responder. La IA no era parte del plan.
+        </p>
+        <p style="font-size: 15px; line-height: 1.65; color: #444; margin: 0 0 14px;">
+          Pero entendí algo esencial: <strong>la IA no viene a reemplazar al community manager, viene a potenciarlo.</strong>
+        </p>
+        <p style="font-size: 15px; line-height: 1.65; color: #444;">
+          Hoy uso la IA en cada fase de mi proceso: estrategia, contenido, automatizaciones y anuncios. Y quiero mostrarte exactamente cómo hacerlo tú también.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="background: {{ colors.dark }}; padding: 70px clamp(20px,5vw,80px);">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <div style="color: #F4C430; font-size: 20px; letter-spacing: 4px; margin-bottom: 14px;">★★★★★</div>
+        <h2 style="font-family: 'Baloo 2', sans-serif; color: {{ colors.teal }}; font-size: clamp(18px,2vw,22px); margin: 0 0 8px;">Atención, escépticos</h2>
+        <p style="color: #fff; font-family: 'Baloo 2', sans-serif; font-size: clamp(20px,2.6vw,28px); font-weight: 600; margin: 0;">
+          Estos testimonios pueden causar cambios de opinión
+        </p>
+        <p style="color: #777; font-size: 13px; margin-top: 14px;">Testimonios de ejemplo — reemplaza con los reales de tus alumnos.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 20px;">
+        <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+          <div style="background: {{ colors.darkCard }}; border-radius: 14px; padding: 24px;">
+            <div style="font-size: 14px; color: #ddd; line-height: 1.6; margin-bottom: 16px;">"{{ t.quote }}"</div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: 'Baloo 2', sans-serif; color: #fff; font-weight: 600; font-size: 13.5px;">{{ t.name }}</span>
+              <span style="color: #F4C430; font-size: 13px;">★★★★★</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <button style="font-family: 'Baloo 2', sans-serif; background: {{ colors.primary }}; color: #fff; border: none; padding: 18px 34px; border-radius: 10px; font-size: 14.5px; font-weight: 700; cursor: pointer; box-shadow: 0 6px 0 {{ colors.primaryShadow }}; transition: transform .15s ease, box-shadow .15s ease;" style-hover="transform: translateY(-2px); box-shadow: 0 8px 0 {{ colors.primaryShadow }};" style-active="transform: translateY(4px); box-shadow: 0 2px 0 {{ colors.primaryShadow }};">
+          DESCUBRE CÓMO TRANSFORMAR TUS REDES CON IA »
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section style="background: {{ colors.dark }}; padding: 60px clamp(20px,5vw,80px) 70px;">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+      <div style="flex: 0 0 180px; display: flex; justify-content: center;">
+        <div style="width: 160px; height: 160px; border-radius: 50%; border: 2px dashed {{ colors.accent }}; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <span style="font-family: 'Baloo 2', sans-serif; font-size: 44px; font-weight: 700; color: {{ colors.accent }};">7</span>
+          <span style="color: #F4C430; font-size: 12px; letter-spacing: 1px;">★ ★ ★ ★ ★</span>
+        </div>
+      </div>
+      <div style="flex: 1 1 400px; min-width: 280px;">
+        <h2 style="font-family: 'Baloo 2', sans-serif; color: {{ colors.teal }}; font-size: clamp(18px,2.2vw,24px); margin: 0 0 14px; line-height: 1.3;">
+          Garantía de satisfacción de 7 días
+        </h2>
+        <p style="color: #ccc; font-size: 14.5px; line-height: 1.65; margin: 0;">
+          Tu compra se encuentra respaldada por la garantía de satisfacción de 7 días. Si aplicas los módulos y no ves el valor que esperabas, escríbenos y te devolvemos tu dinero. Así de simple, sin preguntas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE SUMMARY -->
+  <section style="background: #fff; padding: 70px clamp(20px,5vw,80px);">
+    <div style="max-width: 1280px; margin: 0 auto; text-align: center; margin-bottom: 50px;">
+      <h2 style="font-family: 'Baloo 2', sans-serif; font-size: clamp(30px,5vw,54px); color: #eee; margin: 0 0 10px; -webkit-text-stroke: 1px #ddd;">Con solo $47 USD</h2>
+      <p style="font-family: 'Baloo 2', sans-serif; font-size: clamp(18px,2.2vw,24px); color: {{ colors.primary }}; font-weight: 600; margin: 0 auto 30px; max-width: 640px;">
+        obtendrás las claves para hacer que la IA trabaje para ti, no al revés, junto a:
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 24px; max-width: 1000px; margin: 0 auto;">
+        <sc-for list="{{ includes }}" as="inc" hint-placeholder-count="4">
+          <div style="border-top: 2px solid {{ colors.primary }}; padding-top: 12px; text-align: left;">
+            <div style="color: #14141a; font-size: 13.5px; line-height: 1.5;">{{ inc }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+      <div style="flex: 1 1 300px; min-width: 260px;">
+        <h3 style="font-family: 'Baloo 2', sans-serif; font-size: clamp(20px,2.4vw,26px); color: #14141a; margin: 0 0 20px;">Al inscribirte recibirás</h3>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <sc-for list="{{ enrollItems }}" as="e" hint-placeholder-count="4">
+            <div style="display: flex; gap: 10px; align-items: flex-start;">
+              <span style="color: {{ colors.primary }}; font-size: 15px;">◆</span>
+              <span style="font-size: 14px; color: #333; line-height: 1.5;">{{ e }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="flex: 1 1 360px; min-width: 300px; border: 2px solid {{ colors.primary }}; border-radius: 20px; padding: 34px; text-align: center;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 22px;">
+          <div style="width: 30px; height: 30px; border-radius: 7px; background: {{ colors.primary }}; display: flex; align-items: center; justify-content: center;">
+            <div style="width: 13px; height: 16px; border: 2px solid {{ colors.accent }}; border-radius: 2px;"></div>
+          </div>
+          <div style="font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 19px; color: #14141a;">COMMUNITY MANAGER EXPRESS<br><span style="color: {{ colors.primary }}; font-size: 16px;">con IA</span></div>
+        </div>
+        <div style="border: 1.5px solid #ddd; border-radius: 20px; padding: 5px 16px; display: inline-block; font-size: 12px; color: #666; margin-bottom: 16px;">VALOR DEL CURSO</div>
+        <div style="font-family: 'Baloo 2', sans-serif; font-size: clamp(38px,5vw,50px); font-weight: 700; color: {{ colors.primary }}; margin-bottom: 22px;">$47,00 USD</div>
+        <button style="width: 100%; font-family: 'Baloo 2', sans-serif; background: {{ colors.primary }}; color: #fff; border: none; padding: 18px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 6px 0 {{ colors.primaryShadow }}; transition: transform .15s ease, box-shadow .15s ease; margin-bottom: 18px;" style-hover="transform: translateY(-2px); box-shadow: 0 8px 0 {{ colors.primaryShadow }};" style-active="transform: translateY(4px); box-shadow: 0 2px 0 {{ colors.primaryShadow }};">
+          INSCRIBIRME POR $47 »
+        </button>
+        <div style="display: flex; justify-content: center; gap: 12px; color: #999; font-size: 13px; font-weight: 600;">
+          <span>VISA</span><span>Mastercard</span><span>PayPal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section style="background: #F4F3EE; padding: 70px clamp(20px,5vw,80px);">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
+      <div style="flex: 1 1 420px; min-width: 280px;">
+        <h2 style="font-family: 'Baloo 2', sans-serif; font-size: clamp(22px,2.6vw,30px); color: #14141a; margin: 0 0 18px; line-height: 1.25;">
+          El curso que te hará decir:<br><span style="color: {{ colors.primary }};">¿Por qué demonios no empecé antes con la IA?</span>
+        </h2>
+        <div style="display: flex; gap: 10px; border: 1.5px solid #ddd; border-radius: 10px; padding: 14px 16px; margin-bottom: 20px;">
+          <span style="font-size: 16px;">⚠</span>
+          <span style="font-size: 13.5px; color: #555; line-height: 1.5;">Probablemente lo habrás oído muchas veces, pero es importante recordarlo: la IA no viene a robarte el trabajo.</span>
+        </div>
+        <p style="font-size: 14.5px; line-height: 1.65; color: #444; margin: 0 0 14px;">
+          Lo que sí va a hacer es revolucionar cómo gestionas tus redes, cómo creas contenido y cómo conectas con tu comunidad.
+        </p>
+        <p style="font-size: 14.5px; line-height: 1.65; color: #444; margin: 0 0 14px;">
+          Los community managers que dominen esta tecnología no solo escalarán más rápido y construirán comunidades más grandes, sino que también crearán flujos de trabajo tan eficientes que se preguntarán cómo trabajaron sin ella.
+        </p>
+        <p style="font-size: 14.5px; line-height: 1.65; color: #444; margin: 0 0 22px;">
+          No se trata de competir con la IA, sino de convertirla en tu aliada. ¿Todo listo para empezar?
+        </p>
+        <button style="font-family: 'Baloo 2', sans-serif; background: {{ colors.primary }}; color: #fff; border: none; padding: 18px 30px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 6px 0 {{ colors.primaryShadow }}; transition: transform .15s ease, box-shadow .15s ease;" style-hover="transform: translateY(-2px); box-shadow: 0 8px 0 {{ colors.primaryShadow }};" style-active="transform: translateY(4px); box-shadow: 0 2px 0 {{ colors.primaryShadow }};">
+          EMPIEZA HOY MISMO POR $47 »
+        </button>
+      </div>
+      <div style="flex: 1 1 380px; min-width: 280px; display: flex; justify-content: center;">
+        <div style="width: min(100%,400px); aspect-ratio: 4/3; border-radius: 16px; background: repeating-linear-gradient(135deg,#e4e0ff,#e4e0ff 14px,#ece8ff 14px,#ece8ff 28px); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: monospace; font-size: 12px; color: {{ colors.primary }};">mockup: laptop + tablet + móvil</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: {{ colors.dark }}; padding: 40px clamp(20px,5vw,80px); text-align: center;">
+    <p style="color: #666; font-size: 12.5px; margin: 0;">© {{ year }} Community Manager Express con IA — Sergio Chala. Todos los derechos reservados.</p>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;palette&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:[&quot;#CBEF3E&quot;,&quot;#4B2FE3&quot;,&quot;#0A0A0F&quot;,&quot;#4DE8C8&quot;],&quot;options&quot;:[[&quot;#CBEF3E&quot;,&quot;#4B2FE3&quot;,&quot;#0A0A0F&quot;,&quot;#4DE8C8&quot;],[&quot;#FFD166&quot;,&quot;#E8492B&quot;,&quot;#241715&quot;,&quot;#2EC4B6&quot;],[&quot;#8CF5D6&quot;,&quot;#1D4ED8&quot;,&quot;#0B1024&quot;,&quot;#F97362&quot;],[&quot;#F5E663&quot;,&quot;#C026D3&quot;,&quot;#141021&quot;,&quot;#38E1C6&quot;],[&quot;#D9F99D&quot;,&quot;#166534&quot;,&quot;#0C1B12&quot;,&quot;#F59E0B&quot;]],&quot;tsType&quot;:&quot;[string,string,string,string]&quot;,&quot;section&quot;:&quot;Paleta de colores&quot;}}">
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.moduleTrackRef = React.createRef();
+  }
+
+  scrollModules(dir) {
+    const el = this.moduleTrackRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir === 'left' ? -260 : 260, behavior: 'smooth' });
+  }
+
+  mix(hexA, hexB, amt) {
+    const a = parseInt(hexA.slice(1), 16), b = parseInt(hexB.slice(1), 16);
+    const ar = (a >> 16) & 255, ag = (a >> 8) & 255, ab = a & 255;
+    const br = (b >> 16) & 255, bg = (b >> 8) & 255, bb = b & 255;
+    const r = Math.round(ar + (br - ar) * amt), g = Math.round(ag + (bg - ag) * amt), bl = Math.round(ab + (bb - ab) * amt);
+    return '#' + [r, g, bl].map((v) => v.toString(16).padStart(2, '0')).join('');
+  }
+
+  renderVals() {
+    const [accent, primary, dark, teal] = this.props.palette ?? ['#CBEF3E', '#4B2FE3', '#0A0A0F', '#4DE8C8'];
+    const colors = {
+      accent, primary, dark, teal,
+      primaryLight: this.mix(primary, '#ffffff', 0.18),
+      primaryShadow: this.mix(primary, '#000000', 0.35),
+      primaryTint: this.mix(primary, '#ffffff', 0.92),
+      textTint1: this.mix(primary, '#ffffff', 0.85),
+      textTint2: this.mix(primary, '#ffffff', 0.8),
+      textTint3: this.mix(primary, '#ffffff', 0.83),
+      outlineStroke: this.mix(primary, '#ffffff', 0.35),
+      darkCard: this.mix(dark, '#ffffff', 0.06),
+    };
+    const characters = [
+      { name: 'La Multitarea Agotada', desc: 'Publica en cinco redes a la vez, responde comentarios a media noche y siente que nunca desconecta.', bg: '#CBEF3E' },
+      { name: 'La Escéptica de la IA', desc: 'Cree que la IA le quitará su toque personal, así que sigue redactando todo a mano, letra por letra.', bg: '#9FD8FF' },
+      { name: 'El Copia y Pega', desc: 'Prueba cada prompt viral que ve, pero sus publicaciones suenan igual que las de todos los demás.', bg: '#FFD98E' },
+      { name: 'La Perfeccionista Bloqueada', desc: 'Revisa cada caption veinte veces y termina publicando dos días tarde, si es que publica.', bg: '#FFB4C6' },
+      { name: 'El Optimista Confundido', desc: 'Sabe que la IA puede ayudarle, pero cada herramienta nueva lo deja con más preguntas que respuestas.', bg: '#C9B8FF' },
+    ];
+    const painPoints = [
+      'Presión constante por publicar más contenido, más rápido',
+      'Promesas de "productividad instantánea" que no se cumplen',
+      'Prompts genéricos que producen contenido irrelevante',
+      'Crisis de identidad de marca al usar contenido que no refleja tu voz',
+      'Horas perdidas ajustando indicaciones sin obtener resultados',
+    ];
+    const benefits = [
+      { title: 'Dominar el Arte del Prompt', desc: 'Crea indicaciones poderosas que generen ideas y contenido en minutos, no en horas.' },
+      { title: 'Optimizar tu Flujo de Trabajo', desc: 'Integra la IA de forma eficiente en tu gestión diaria de redes sociales.' },
+      { title: 'Crear Contenido que Venda', desc: 'Diseña publicaciones que conecten con tu audiencia y generen resultados reales.' },
+      { title: 'Automatizar con Chatbots', desc: 'Configura respuestas automáticas y flujos que atienden a tu comunidad 24/7.' },
+      { title: 'Lanzar tus Primeros Anuncios', desc: 'Introdúcete en Facebook Ads con una base sólida y estratégica.' },
+      { title: 'Medir tus Resultados', desc: 'Aprende a leer informes y ajustar tu estrategia con datos reales.' },
+      { title: 'Preservar tu Voz Única', desc: 'Usa la IA para amplificar tu estilo, no para reemplazarlo.' },
+      { title: 'Multiplicar tu Productividad', desc: 'Produce más contenido de calidad en mucho menos tiempo.' },
+    ];
+    const processSteps = [
+      { label: 'CREA', title: 'Diseña tus propios prompts', desc: 'Prompts tan únicos como tu marca personal o la de tus clientes.' },
+      { label: 'EVOLUCIONA', title: 'Adapta tus prompts al crecimiento', desc: 'Mantente al día con las tendencias de redes sociales.' },
+      { label: 'DOMINA', title: 'Entiende la psicología detrás de un prompt efectivo', desc: 'Estructura peticiones que dan respuestas precisas.' },
+      { label: 'LIBÉRATE', title: 'Supera la dependencia de prompts prefabricados', desc: 'Gana confianza en tu propia creatividad con IA.' },
+    ];
+    const modules = [
+      { num: 1, title: 'Introducción al Community Manager', desc: 'Domina los fundamentos del rol y cómo la IA se integra en tu día a día.', isNew: false },
+      { num: 2, title: 'Estrategias de Redes Sociales', desc: 'Construye una estrategia de contenido sólida para cada plataforma.', isNew: false },
+      { num: 3, title: 'Herramientas de Inteligencia Artificial', desc: 'Conoce y domina las herramientas de IA clave para tu trabajo diario.', isNew: true },
+      { num: 4, title: 'Creando tu Facebook, Instagram, TikTok y más', desc: 'Configura y optimiza tus perfiles en cada red social.', isNew: false },
+      { num: 5, title: 'Contenido que Genera Ventas', desc: 'Aprende a crear publicaciones que conviertan seguidores en clientes.', isNew: false },
+      { num: 6, title: 'Chatbots y Automatizaciones', desc: 'Automatiza la atención a tu comunidad sin perder calidez.', isNew: true },
+      { num: 7, title: 'Introducción a Facebook Ads', desc: 'Da tus primeros pasos en publicidad pagada con confianza.', isNew: true },
+      { num: 8, title: 'Informes', desc: 'Mide, interpreta y comunica los resultados de tu gestión.', isNew: false },
+    ];
+    const bonuses = [
+      { tag: 'BONUS 1', title: 'MasterClass: Diseña en Canva en Tiempo Récord', desc: 'Aprende a crear piezas gráficas profesionales para tus redes en minutos.', value: 'Valor $47 USD — Gratis con el curso', imgBg: '#7CE0D3' },
+      { tag: 'BONUS 2', title: 'Plantillas VIP de Canva + Portafolios de Servicios', desc: 'Plantillas listas para publicaciones de Instagram y portafolios de servicios.', value: 'Valor $27 USD — Gratis con el curso', imgBg: '#CBEF3E' },
+      { tag: 'BONUS 3', title: 'Comunidad en WhatsApp + Clase en Vivo', desc: 'Acceso a la comunidad privada y una clase en vivo por Zoom.', value: 'Incluido con el curso', imgBg: '#FFD98E' },
+    ];
+    const testimonials = [
+      { quote: 'Reemplaza este texto con la opinión real de tu alumno.', name: 'Nombre Apellido — Cargo' },
+      { quote: 'Reemplaza este texto con la opinión real de tu alumno.', name: 'Nombre Apellido — Cargo' },
+      { quote: 'Reemplaza este texto con la opinión real de tu alumno.', name: 'Nombre Apellido — Cargo' },
+    ];
+    const includes = [
+      '8 módulos de contenido práctico y aplicable',
+      'Ejercicios y desafíos para dominar cada técnica',
+      'Acceso de por vida al curso y sus actualizaciones',
+      'La capacidad de revolucionar tu forma de trabajar con IA',
+    ];
+    const enrollItems = [
+      'Acceso de por vida a Community Manager Express con IA y sus actualizaciones',
+      'MasterClass de diseño en Canva',
+      'Plantillas VIP de Canva + Portafolios de servicios',
+      'Comunidad en WhatsApp + clase en vivo por Zoom',
+    ];
+    return {
+      colors,
+      characters, painPoints, benefits, processSteps, modules, bonuses,
+      testimonials, includes, enrollItems,
+      moduleTrackRef: this.moduleTrackRef,
+      scrollModules: (dir) => this.scrollModules(dir),
+      year: new Date().getFullYear(),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
