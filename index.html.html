@@ -61,12 +61,91 @@
     </div>
   </section>
 
-<form method="post" action="https://systeme.io/embedded/43558015/subscription"> <input type=text name=email />
-  <div class="f-row">
-    <button type="submit" class="btn">Subscribe</button>
+<!-- FORMULARIO SYSTEME.IO -->
+<section style="background:#ffffff; padding:32px 20px;">
+  <div style="
+    max-width:900px;
+    margin:0 auto;
+    background:#F4F3EE;
+    border-radius:18px;
+    padding:28px;
+    text-align:center;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+  ">
+
+    <div style="
+      font-family:'Baloo 2', sans-serif;
+      font-size:clamp(22px,2.5vw,30px);
+      font-weight:700;
+      color:#14141a;
+      margin-bottom:8px;
+    ">
+      ¿Quieres recibir recursos para gestionar tus redes con IA?
+    </div>
+
+    <div style="
+      font-family:'Poppins', sans-serif;
+      font-size:14px;
+      color:#666;
+      margin-bottom:22px;
+    ">
+      Déjame tu correo y te enviaré novedades, recursos y contenido práctico.
+    </div>
+
+    <form method="post"
+      action="https://systeme.io/embedded/43558015/subscription"
+      style="
+        display:flex;
+        gap:12px;
+        justify-content:center;
+        align-items:stretch;
+        flex-wrap:wrap;
+        max-width:700px;
+        margin:0 auto;
+      "
+    >
+
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="Tu mejor correo electrónico"
+        style="
+          flex:1 1 320px;
+          min-width:240px;
+          padding:16px 18px;
+          border:2px solid #ddd;
+          border-radius:10px;
+          font-family:'Poppins', sans-serif;
+          font-size:15px;
+          outline:none;
+          box-sizing:border-box;
+        "
+      />
+
+      <button
+        type="submit"
+        style="
+          flex:0 0 auto;
+          background:#4B2FE3;
+          color:#fff;
+          border:none;
+          padding:16px 26px;
+          border-radius:10px;
+          font-family:'Baloo 2', sans-serif;
+          font-size:15px;
+          font-weight:700;
+          cursor:pointer;
+          box-shadow:0 5px 0 #31208f;
+        "
+      >
+        QUIERO RECIBIRLO »
+      </button>
+
+    </form>
+
   </div>
-  </form>
-  
+</section>  
   
   <!-- TRANSITION BAR -->
   <section style="background: {{ colors.dark }}; padding: 30px clamp(20px,5vw,80px);">
